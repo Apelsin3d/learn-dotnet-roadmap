@@ -24,12 +24,12 @@
 
         public static int Increment(ref int a)
         {
-            return a++;
+            return ++a;
         }
 
         public static int Decrement(ref int a)
         {
-            return a--;
+            return --a;
         }
 
         public static int Square(in int a)
@@ -37,7 +37,7 @@
             return a * a;
         }
 
-        public static int Divide(int a, int b)
+        public static decimal Divide(int a, int b)
         {
             return a / b;
         }
