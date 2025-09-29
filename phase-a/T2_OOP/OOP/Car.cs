@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace OOP
 {
-    internal class Car
+    public class Car
     {
+        public string Brand { get; set; }
+        public int Year { get; set; }
+
+        public void ShowInfo()
+        {
+            Console.WriteLine($"Car is {Brand}, {Year} year of manufacture");
+        }
     }
 }
