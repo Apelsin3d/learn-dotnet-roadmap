@@ -1,6 +1,6 @@
 ﻿namespace Utils
 {
-    public class MathUtils
+    public static class MathUtils
     {
         public static int Add(int a, int b)
         {
@@ -37,14 +37,22 @@
             return a * a;
         }
 
-        public static decimal Divide(int a, int b)
+        /// <summary>
+        /// Dangerous division, may contain errors, not checked for 0
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
+        public static decimal Divide(decimal a, decimal b)
         {
             return a / b;
         }
 
-        public static int Swap(ref int a, int b)
+        public static void Swap(ref int a, ref int b)
         {
-            return a = b;
+            var temp = a;
+            a = b;
+            b = temp;
         }
 
         public static int ArraySum(in int[] a)
